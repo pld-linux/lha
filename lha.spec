@@ -3,12 +3,15 @@ Summary(de):	erstellt und erweitert Archive im lharc-Format
 Summary(fr):	crée et décompresse des archives au format lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
-Version:	1.00
-Release:	12
+Version:	1.14e
+Release:	1
 Copyright:	freeware
 Group:		Applications/Archiving
-Source:		ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.Z
-Patch:		lha-fsstnd.patch
+Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114e.tar.gz
+Source1:	lha.1
+Patch0:		lha-ext.patch
+Patch1:		lha-make.patch
+URL:		http://www2m.meshnet.or.jp/~dolphin/lha/lha-unix.htm
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -34,24 +37,31 @@ kullanýlmakla birlikte LHA arþivlerinden DOS dosyalarýný açmak için Linux
 altýnda da kullanýlabilir.
 
 %prep
-%setup -q
-%patch -p1
+%setup  -q -n %{name}-114e
+%patch0 -p1
+%patch1 -p1
 
 %build
-make CFLAGS="-DEUC -DSYSV_SYSTEM_DIR -DSYSTIME_HAS_NO_TM -DMKTIME $RPM_OPT_FLAGS"
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,jp/man1}}
 
 install -s src/lha $RPM_BUILD_ROOT%{_bindir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
+install man/lha.man $RPM_BUILD_ROOT%{_mandir}/jp/man1
 
-gzip -9nf README.Linux
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/{man1/*,jp/man1/*} \
+	change-114e.txt {CHANGES,PROBLEMS,README}.euc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc	README.Linux.gz
+%doc change-114e.txt.gz
+%lang(jp) %doc {CHANGES,PROBLEMS,README}.euc.gz
 %attr(755,root,root) %{_bindir}/lha
+%{_mandir}/man1/*
+%lang(jp) %{_mandir}/jp/man1/*
