@@ -5,7 +5,7 @@ Summary(pl):	Program archiwizuj±cy i kompresuj±cy, u¿ywaj±cy formatu archiwów LH
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
 Version:	1.14f
-Release:	1
+Release:	2
 Copyright:	freeware
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
@@ -14,6 +14,7 @@ Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114f.tar.gz
 Source1:	%{name}.1
 Patch0:		%{name}-ext.patch
 Patch1:		%{name}-make.patch
+Patch2:		%{name}-time.patch
 URL:		http://www2m.meshnet.or.jp/~dolphin/lha/lha-unix.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,6 +50,7 @@ açmak için Linux altýnda da kullanýlabilir.
 %setup  -q -n %{name}-114f
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} OPTIMIZE="%{rpmcflags} -DSUPPORT_LH6"

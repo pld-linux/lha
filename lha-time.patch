@@ -1,0 +1,11 @@
+diff -urN lha-114f.org/src/lha.h lha-114f/src/lha.h
+--- lha-114f.org/src/lha.h	Tue Aug 21 18:56:44 2001
++++ lha-114f/src/lha.h	Tue Aug 21 18:57:19 2001
+@@ -15,6 +15,7 @@
+ #include <sys/types.h>
+ #include <sys/file.h>
+ #include <sys/stat.h>
++#include <time.h>
+ 
+ #include <signal.h>
+ 
