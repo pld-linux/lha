@@ -43,7 +43,7 @@ altýnda da kullanýlabilir.
 %patch1 -p1
 
 %build
-make OPTIMIZE="$RPM_OPT_FLAGS -DSUPPORT_LH6"
+%{__make} OPTIMIZE="$RPM_OPT_FLAGS -DSUPPORT_LH6"
 
 %install
 rm -rf $RPM_BUILD_ROOT
