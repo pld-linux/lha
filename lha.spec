@@ -3,11 +3,11 @@ Summary(de):	erstellt und erweitert Archive im lharc-Format
 Summary(fr):	crée et décompresse des archives au format lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
-Version:	1.14e
-Release:	2
+Version:	1.14f
+Release:	1
 Copyright:	freeware
 Group:		Applications/Archiving
-Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114e.tar.gz
+Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114f.tar.gz
 Source1:	lha.1
 Patch0:		lha-ext.patch
 Patch1:		lha-make.patch
@@ -37,12 +37,12 @@ kullanýlmakla birlikte LHA arþivlerinden DOS dosyalarýný açmak için Linux
 altýnda da kullanýlabilir.
 
 %prep
-%setup  -q -n %{name}-114e
+%setup  -q -n %{name}-114f
 %patch0 -p1
 %patch1 -p1
 
 %build
-make OPT_FLAGS="$RPM_OPT_FLAGS"
+make OPTIMIZE="$RPM_OPT_FLAGS -DSUPPORT_LH6"
 
 %install
 rm -rf $RPM_BUILD_ROOT
