@@ -12,6 +12,7 @@ Release:	2
 License:	Freeware
 Group:		Applications/Archiving
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114f.tar.gz
+# Source0-md5: db86f414e08c39e190763f8b0c190ff6
 Source1:	%{name}.1
 Patch0:		%{name}-ext.patch
 Patch1:		%{name}-make.patch
