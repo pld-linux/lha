@@ -10,7 +10,7 @@
  #OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer -mv8
  #OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
 -OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
-+OPTIMIZE	= $(RPM_OPT_FLAGS)
++OPTIMIZE	= $(OPT_FLAGS) -fstrength-reduce -fomit-frame-pointer
  #OPTIMIZE	= -g
  
 -BINDIR = /usr/local/bin
