@@ -1,22 +1,23 @@
---- lha-114e/Makefile.make	Sun Jun  6 16:52:33 1999
-+++ lha-114e/Makefile	Mon Jun 28 13:51:36 1999
-@@ -18,14 +18,15 @@
- SWITCHES	= -DNEED_INCREMENTAL_INDICATOR \
-  -DTMP_FILENAME_TEMPLATE="\"/tmp/lhXXXXXX\""
+diff -Nru lha-114f/Makefile lha-114f.new/Makefile
+--- lha-114f/Makefile	Fri Mar  3 20:03:06 2000
++++ lha-114f.new/Makefile	Fri Mar  3 20:03:29 2000
+@@ -20,14 +20,15 @@
+ 
  #MACHINE     = -DSYSTIME_HAS_NO_TM -DFTIME -DEUC
--MACHINE     = -DSYSTIME_HAS_NO_TM -DEUC -DHAVE_TM_ZONE -DSYSV_SYSTEM_DIR -DSUPPORT_LH6
-+MACHINE     = -DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" \
-+ -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH6
- #OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer -mv8
+ #MACHINE     = -DSYSTIME_HAS_NO_TM -DEUC -DHAVE_TM_ZONE -DSYSV_SYSTEM_DIR
+-MACHINE     = -DSYSTIME_HAS_NO_TM -DEUC -DSYSV_SYSTEM_DIR -DMKTIME
++MACHINE  = -DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" \
++	 -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH6
+ 
  #OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
--OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
-+OPTIMIZE	= $(OPT_FLAGS) -fstrength-reduce -fomit-frame-pointer
- #OPTIMIZE	= -g
+ OPTIMIZE	= -O2 -DSUPPORT_LH6
  
 -BINDIR = /usr/local/bin
 -MANDIR = /usr/local/man
+-MANSECT = n
 +BINDIR = /usr/bin
 +MANDIR = /usr/man
- MANSECT = n
++MANSECT = 1
  
  INSTALL = install
+ INSTALLBIN = -s -m 755
