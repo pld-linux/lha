@@ -52,7 +52,7 @@ install -s src/lha $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
 install man/lha.man $RPM_BUILD_ROOT%{_mandir}/ja/man1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/{man1/*,jp/man1/*} \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/{man1/*,ja/man1/*} \
 	change-114e.txt {CHANGES,PROBLEMS,README}.euc
 
 %clean
