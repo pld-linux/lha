@@ -1,12 +1,14 @@
 Summary:	An archiving and compression utility for LHarc format archives
+Summary(es):	Crea y expande archivos en formato lharc
 Summary(de):	erstellt und erweitert Archive im lharc-Format 
 Summary(fr):	crée et décompresse des archives au format lharc
 Summary(pl):	Program archiwizuj±cy i kompresuj±cy, u¿ywaj±cy formatu archiwów LHarc
+Summary(pt_BR):	Cria e expande arquivos no formato lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
 Version:	1.14f
 Release:	2
-Copyright:	freeware
+License:	Freeware
 Group:		Applications/Archiving
 Group(de):	Applikationen/Archivierung
 Group(pl):	Aplikacje/Archiwizacja
@@ -31,6 +33,10 @@ Dies ist ein Archivierungs- und Komprimierungsdienstprogramm. Es wird
 überwiegend unter DOS verwendet, kann aber auch unter Linux eingesetzt
 werden, um DOS-Dateien aus LHA-Archiven zu extrahieren.
 
+%description -l es
+Éste es un utilitario de almacenaje y compresión. Es más utilizado en
+el mundo Amiga, pero puede ser usado en Linux para extraer archivos.
+
 %description -l fr
 Un utilitaire d'archivage et de compression. il est surtout utilisé
 dans le monde DOS, mais peut être utilisé sous Linux pour extraire des
@@ -40,6 +46,11 @@ fichiers dans des archives LHA.
 LHA jest programem archiwizuj±cym i kompresuj±cym dla archiwów w
 formacie LHarc. By³ u¿ywany g³ównie w ¶rodowisku DOS, pod Linuksem
 mo¿e byæ u¿yty do rozpakowania archiwów LHA.
+
+%description -l pt_BR
+Este é um utilitário de armazenamento e compressão. Ele é mais
+utilizado no mundo Amiga, mas pode ser usado no Linux para extrair
+arquivos.
 
 %description -l tr
 Bu bir dosya arþivleme ve sýkýþtýrma programýdýr. Genelde DOS
