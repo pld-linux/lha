@@ -1,6 +1,6 @@
 Summary:	An archiving and compression utility for LHarc format archives
 Summary(es):	Crea y expande archivos en formato lharc
-Summary(de):	erstellt und erweitert Archive im lharc-Format 
+Summary(de):	erstellt und erweitert Archive im lharc-Format
 Summary(fr):	crée et décompresse des archives au format lharc
 Summary(ja):	¹â°µ½Ì¥¢¡¼¥«¥¤¥Ð
 Summary(pl):	Program archiwizuj±cy i kompresuj±cy, u¿ywaj±cy formatu archiwów LHarc
