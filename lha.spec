@@ -1,3 +1,4 @@
+# SECURITY TODO: CAN-2004-0745 CAN-2004-0769 CAN-2004-0771
 Summary:	An archiving and compression utility for LHarc format archives
 Summary(es):	Crea y expande archivos en formato lharc
 Summary(de):	erstellt und erweitert Archive im lharc-Format
