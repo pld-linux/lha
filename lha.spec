@@ -6,7 +6,8 @@ Name:		lha
 Version:	1.14f
 Release:	1
 Copyright:	freeware
-Group:		Applications/Archiving
+Group:		Utilities/Archiving
+Group(pl):      Narzêdzia/Archiwizacja 
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114f.tar.gz
 Source1:	lha.1
 Patch0:		lha-ext.patch
