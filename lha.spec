@@ -12,7 +12,7 @@ Source1:	lha.1
 Patch0:		lha-ext.patch
 Patch1:		lha-make.patch
 URL:		http://www2m.meshnet.or.jp/~dolphin/lha/lha-unix.htm
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 LHA is an archiving and compression utility for LHarc format archives.
