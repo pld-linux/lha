@@ -7,16 +7,17 @@ Summary(pl):	Program archiwizuj±cy i kompresuj±cy, u¿ywaj±cy formatu archiwów LH
 Summary(pt_BR):	Cria e expande arquivos no formato lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
-Version:	1.14f
-Release:	3
+Version:	1.14i
+Release:	0.1
 License:	Freeware
 Group:		Applications/Archiving
-Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114f.tar.gz
-# Source0-md5: db86f414e08c39e190763f8b0c190ff6
+Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114i.tar.gz
+# Source0-md5:	5225884d557b91f04124693e2c5c9e94
 Source1:	%{name}.1
 Patch0:		%{name}-ext.patch
-Patch1:		%{name}-make.patch
-Patch2:		%{name}-time.patch
+Patch1:		%{name}-time.patch
+Patch2:		%{name}-sec.patch
+Patch3:		%{name}-symlink.patch
 URL:		http://www2m.meshnet.or.jp/~dolphin/lha/lha-unix.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,13 +65,19 @@ dünyasýnda kullanýlmakla birlikte LHA arþivlerinden DOS dosyalarýný
 açmak için Linux altýnda da kullanýlabilir.
 
 %prep
-%setup  -q -n %{name}-114f
+%setup  -q -n %{name}-114i
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
-%{__make} OPTIMIZE="%{rpmcflags} -DSUPPORT_LH6"
+%{__make} \
+	OPTIMIZE="%{rpmcflags} -DSUPPORT_LH7 -DMKSTEMP" \
+	MACHINE="-DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH7" \
+	BINDIR=%{_bindir} \
+	MANDIR=%{_mandir} \
+	MANSECT=1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -85,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc change-114e.txt
+%doc change-*.txt
 %lang(ja) %doc {CHANGES,PROBLEMS,README}.euc
 %attr(755,root,root) %{_bindir}/lha
 %{_mandir}/man1/*
