@@ -5,7 +5,7 @@ Release:	12
 Copyright:	freeware
 Group:		Applications/Archiving
 Source:		ftp://sunsite.unc.edu/pub/Linux/utils/compress/%{name}-%{version}.tar.Z
-Patch:		lha-1.00-fsstnd.patch
+Patch:		lha-fsstnd.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
