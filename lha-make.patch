@@ -1,0 +1,22 @@
+--- lha-114e/Makefile.make	Sun Jun  6 16:52:33 1999
++++ lha-114e/Makefile	Mon Jun 28 13:51:36 1999
+@@ -18,14 +18,15 @@
+ SWITCHES	= -DNEED_INCREMENTAL_INDICATOR \
+  -DTMP_FILENAME_TEMPLATE="\"/tmp/lhXXXXXX\""
+ #MACHINE     = -DSYSTIME_HAS_NO_TM -DFTIME -DEUC
+-MACHINE     = -DSYSTIME_HAS_NO_TM -DEUC -DHAVE_TM_ZONE -DSYSV_SYSTEM_DIR -DSUPPORT_LH6
++MACHINE     = -DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" \
++ -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH6
+ #OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer -mv8
+ #OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
+-OPTIMIZE	= -O2 -fstrength-reduce -fomit-frame-pointer
++OPTIMIZE	= $(RPM_OPT_FLAGS)
+ #OPTIMIZE	= -g
+ 
+-BINDIR = /usr/local/bin
+-MANDIR = /usr/local/man
++BINDIR = /usr/bin
++MANDIR = /usr/man
+ MANSECT = n
+ 
+ INSTALL = install
