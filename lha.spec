@@ -4,7 +4,7 @@ Summary(fr):	crée et décompresse des archives au format lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
 Version:	1.14e
-Release:	1
+Release:	2
 Copyright:	freeware
 Group:		Applications/Archiving
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114e.tar.gz
@@ -46,7 +46,7 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,jp/man1}}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,ja/man1}}
 
 install -s src/lha $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc change-114e.txt.gz
-%lang(jp) %doc {CHANGES,PROBLEMS,README}.euc.gz
+%lang(ja) %doc {CHANGES,PROBLEMS,README}.euc.gz
 %attr(755,root,root) %{_bindir}/lha
 %{_mandir}/man1/*
-%lang(jp) %{_mandir}/jp/man1/*
+%lang(ja) %{_mandir}/ja/man1/*
