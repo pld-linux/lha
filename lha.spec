@@ -1,4 +1,3 @@
-# SECURITY TODO: CAN-2004-0745 CAN-2004-0769 CAN-2004-0771
 Summary:	An archiving and compression utility for LHarc format archives
 Summary(es):	Crea y expande archivos en formato lharc
 Summary(de):	erstellt und erweitert Archive im lharc-Format
@@ -9,7 +8,7 @@ Summary(pt_BR):	Cria e expande arquivos no formato lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
 Version:	1.14i
-Release:	2	
+Release:	3
 License:	Freeware
 Group:		Applications/Archiving
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114i.tar.gz
@@ -19,6 +18,8 @@ Patch0:		%{name}-ext.patch
 Patch1:		%{name}-time.patch
 Patch2:		%{name}-sec.patch
 Patch3:		%{name}-symlink.patch
+Patch4:		%{name}-dir_length_bounds_check.patch
+Patch5:		%{name}-security_fixes.patch
 URL:		http://www2m.meshnet.or.jp/~dolphin/lha/lha-unix.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -71,6 +72,8 @@ açmak için Linux altýnda da kullanýlabilir.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p0
+%patch5 -p1
 
 %build
 %{__make} \
