@@ -8,7 +8,7 @@ Summary(pt_BR):	Cria e expande arquivos no formato lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
 Version:	1.14i
-Release:	0.1
+Release:	0.2
 License:	Freeware
 Group:		Applications/Archiving
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114i.tar.gz
@@ -74,7 +74,7 @@ açmak için Linux altýnda da kullanýlabilir.
 %build
 %{__make} \
 	OPTIMIZE="%{rpmcflags} -DSUPPORT_LH7 -DMKSTEMP" \
-	MACHINE="-DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH7" \
+	MACHINE='-DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH7' \
 	BINDIR=%{_bindir} \
 	MANDIR=%{_mandir} \
 	MANSECT=1
