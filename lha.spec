@@ -79,15 +79,13 @@ install src/lha $RPM_BUILD_ROOT%{_bindir}
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/man1
 install man/lha.man $RPM_BUILD_ROOT%{_mandir}/ja/man1
 
-gzip -9nf change-114e.txt {CHANGES,PROBLEMS,README}.euc
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc change-114e.txt.gz
-%lang(ja) %doc {CHANGES,PROBLEMS,README}.euc.gz
+%doc change-114e.txt
+%lang(ja) %doc {CHANGES,PROBLEMS,README}.euc
 %attr(755,root,root) %{_bindir}/lha
 %{_mandir}/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
