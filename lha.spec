@@ -11,8 +11,6 @@ Version:	1.14f
 Release:	2
 License:	Freeware
 Group:		Applications/Archiving
-Group(de):	Applikationen/Archivierung
-Group(pl):	Aplikacje/Archiwizacja
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114f.tar.gz
 Source1:	%{name}.1
 Patch0:		%{name}-ext.patch
