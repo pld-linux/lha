@@ -8,7 +8,7 @@ Summary(pt_BR):	Cria e expande arquivos no formato lharc
 Summary(tr):	lharc biçimindeki arþivleri yaratýr ve geniþletir
 Name:		lha
 Version:	1.14i
-Release:	3
+Release:	4
 License:	Freeware
 Group:		Applications/Archiving
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114i.tar.gz
@@ -45,7 +45,7 @@ Un utilitaire d'archivage et de compression. il est surtout utilisé
 dans le monde DOS, mais peut être utilisé sous Linux pour extraire des
 fichiers dans des archives LHA.
 
-%description
+%description -l ja
 LHa ¤Ï¸úÎ¨¤Î¹â¤¤°µ½Ìµ¡Ç½¤ò»ý¤Ä¥Õ¥¡¥¤¥ë¥¢¡¼¥«¥¤¥Ð¤Ç¤¹¡£
 
 ¤³¤ì¤Ï -lh5-, -lh6- °µ½Ì·Á¼°¤Ç¤Î°µ½Ì/Å¸³«¤¬²ÄÇ½¤Ê¥¢¡¼¥«¥¤¥Ð
