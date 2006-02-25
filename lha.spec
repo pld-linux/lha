@@ -37,7 +37,7 @@ Dies ist ein Archivierungs- und Komprimierungsdienstprogramm. Es wird
 werden, um DOS-Dateien aus LHA-Archiven zu extrahieren.
 
 %description -l es
-Éste es un utilitario de almacenaje y compresión. Es más utilizado en
+LHA es un utilitario de almacenaje y compresión. Es más utilizado en
 el mundo Amiga, pero puede ser usado en Linux para extraer archivos.
 
 %description -l fr
@@ -77,6 +77,7 @@ açmak için Linux altýnda da kullanýlabilir.
 
 %build
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags} -DSUPPORT_LH7 -DMKSTEMP" \
 	MACHINE='-DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH7' \
 	BINDIR=%{_bindir} \
