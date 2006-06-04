@@ -20,7 +20,7 @@ Patch2:		%{name}-sec.patch
 Patch3:		%{name}-symlink.patch
 Patch4:		%{name}-dir_length_bounds_check.patch
 Patch5:		%{name}-security_fixes.patch
-URL:		http://www2m.meshnet.or.jp/~dolphin/lha/lha-unix.htm
+URL:		http://www2m.biglobe.ne.jp/~dolphin/lha/lha-unix.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
