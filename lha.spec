@@ -1,11 +1,11 @@
 Summary:	An archiving and compression utility for LHarc format archives
-Summary(es.UTF-8):   Crea y expande archivos en formato lharc
-Summary(de.UTF-8):   erstellt und erweitert Archive im lharc-Format
-Summary(fr.UTF-8):   crée et décompresse des archives au format lharc
-Summary(ja.UTF-8):   高圧縮アーカイバ
-Summary(pl.UTF-8):   Program archiwizujący i kompresujący, używający formatu archiwów LHarc
-Summary(pt_BR.UTF-8):   Cria e expande arquivos no formato lharc
-Summary(tr.UTF-8):   lharc biçimindeki arşivleri yaratır ve genişletir
+Summary(es.UTF-8):	Crea y expande archivos en formato lharc
+Summary(de.UTF-8):	erstellt und erweitert Archive im lharc-Format
+Summary(fr.UTF-8):	crée et décompresse des archives au format lharc
+Summary(ja.UTF-8):	高圧縮アーカイバ
+Summary(pl.UTF-8):	Program archiwizujący i kompresujący, używający formatu archiwów LHarc
+Summary(pt_BR.UTF-8):	Cria e expande arquivos no formato lharc
+Summary(tr.UTF-8):	lharc biçimindeki arşivleri yaratır ve genişletir
 Name:		lha
 Version:	1.14i
 Release:	4
