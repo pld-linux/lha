@@ -8,7 +8,7 @@ Summary(pt_BR.UTF-8):	Cria e expande arquivos no formato lharc
 Summary(tr.UTF-8):	lharc biçimindeki arşivleri yaratır ve genişletir
 Name:		lha
 Version:	1.14i
-Release:	4
+Release:	15
 License:	Freeware
 Group:		Applications/Archiving
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114i.tar.gz
