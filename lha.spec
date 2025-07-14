@@ -68,12 +68,12 @@ açmak için Linux altında da kullanılabilir.
 
 %prep
 %setup  -q -n %{name}-114i
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p0
-%patch5 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
+%patch -P3 -p1
+%patch -P4 -p0
+%patch -P5 -p1
 
 %build
 %{__make} \
