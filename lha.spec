@@ -8,7 +8,7 @@ Summary(pt_BR.UTF-8):	Cria e expande arquivos no formato lharc
 Summary(tr.UTF-8):	lharc biçimindeki arşivleri yaratır ve genişletir
 Name:		lha
 Version:	1.14i
-Release:	18
+Release:	19
 License:	Freeware
 Group:		Applications/Archiving
 Source0:	http://www2m.biglobe.ne.jp/~dolphin/lha/prog/%{name}-114i.tar.gz
@@ -20,6 +20,7 @@ Patch2:		%{name}-sec.patch
 Patch3:		%{name}-symlink.patch
 Patch4:		%{name}-dir_length_bounds_check.patch
 Patch5:		%{name}-security_fixes.patch
+Patch6:		%{name}-headers.patch
 URL:		http://www2m.biglobe.ne.jp/~dolphin/lha/lha-unix.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -74,11 +75,12 @@ açmak için Linux altında da kullanılabilir.
 %patch -P3 -p1
 %patch -P4 -p0
 %patch -P5 -p1
+%patch -P6 -p1
 
 %build
 %{__make} \
 	CC="%{__cc}" \
-	OPTIMIZE="%{rpmcflags} -DSUPPORT_LH7 -DMKSTEMP" \
+	OPTIMIZE="%{rpmcflags} -std=gnu89 -fcommon -DSUPPORT_LH7 -DMKSTEMP" \
 	MACHINE='-DEUC -DSYSV_SYSTEM_DIR -DTZSET -DARCHIVENAME_EXTENTION=\".lha\" -DBACKUPNAME_EXTENTION=\".bak\" -DSUPPORT_LH7' \
 	BINDIR=%{_bindir} \
 	MANDIR=%{_mandir} \

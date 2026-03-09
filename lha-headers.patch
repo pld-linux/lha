@@ -1,0 +1,18 @@
+--- lha-114i/src/lha.h.orig	2026-03-09 11:00:00.000000000 +0000
++++ lha-114i/src/lha.h	2026-03-09 11:00:00.000000000 +0000
+@@ -14,10 +14,13 @@
+ #include <errno.h>
+ #include <ctype.h>
+ #include <sys/types.h>
+-#include <sys/file.h>
+ #include <sys/stat.h>
+ #include <time.h>
+-
++#include <stdlib.h>
++#include <string.h>
++#include <unistd.h>
++#include <sys/wait.h>
++#include <strings.h>
+ #include <signal.h>
+ 
+ #include "lha_macro.h"
